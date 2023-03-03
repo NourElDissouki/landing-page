@@ -1,0 +1,145 @@
+
+.Cards-View {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: min-content;
+    row-gap: 60px;
+    column-gap: 60px;
+   
+}
+.Card{
+    position: relative;
+    width: calc(100%/4 - 60px);
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: 0.25s;
+    
+}
+.description{
+    display: none;
+}
+.face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 0.25s;
+    transform: perspective(500px) rotateY(0deg);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.Card:hover{
+    transform: scale(1.1);
+}
+.front{
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter: opacity(0.9);
+}
+
+.Card-Title{
+    margin-bottom: 5%;
+    margin-right: 5%;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 10px;
+    width: 90%;
+}
+.Card:hover .front{
+    transform: perspective(400px) rotateY(180deg);
+    filter: opacity(1);
+}
+
+.back{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: perspective(400px) rotateY(180deg);
+}
+.Card:hover .back{
+    transform: perspective(400px) rotateY(360deg);
+}
+
+@media (max-width : 1600px)
+{
+    .Card{
+        width: calc(100% / 3 - 60px);
+    }
+}
+
+@media (max-width : 1200px)
+{
+    .Card{
+        width: Calc(100% / 2 - 30px);
+      }
+    .Card-Title{
+    margin-top: 5px;
+    font-size: 4vw;
+    }
+    
+    .Card-Description{
+    font-size: 2vw;
+    }
+}  
+
+@media (max-width : 650)
+{
+  .Card{
+    width: Calc(100% - 10px);
+    transform: scale(0.9);
+  }
+  .Card:hover{
+    transform: scale(1);
+}
+  .Card:hover{
+    width: Calc(100%);
+  }
+}
+
+/*Mobile Mode*/
+@media (max-width : 430px)
+{
+    .Card{
+        width: Calc(100% - 10px);
+        transform: scale(0.9);
+      }
+      .Card:hover{
+        transform: scale(1);
+    }
+      .Card:hover{
+        width: Calc(100%);
+      }
+      
+      .Card-Title{
+        
+        padding: 0px 5px;
+        font-size: 9vw;
+        
+      }
+    
+      .Card-Description{
+        margin:0px;
+        padding: 0px 5px;
+        font-size: 4vw;
+    
+      }
+}

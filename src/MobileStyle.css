@@ -1,0 +1,205 @@
+@media (max-width : 1600px)
+{
+  .Gallery-Container{
+    height: 300px;
+  }
+}
+
+/*Small Laptop View*/
+@media (max-width : 1200px)
+{
+  .Gallery-Container{
+    height: 600px;
+    }
+   
+
+    .Welcome-Text{
+      width: 70%;
+    }
+
+   
+
+ 
+    #Introduce-Self{
+      width: 90%;
+    }
+
+    .Small-Description-Text {
+      width: 80%;
+    }
+
+    #Consult-Window{ 
+      width: 90%; 
+    }
+    form {
+      width: 60%;
+      margin: 10px;
+    } 
+    #ConsultPhoto{
+      margin-left: 10px;
+    }
+    input , textarea{
+      font-size: 0.8rem;
+    }
+
+    .Section3::before{
+      width: calc(90% - 10px);
+      height: 90%;
+    }
+}
+
+/*Tablet Mode*/
+@media (max-width : 800px)
+{
+  .Gallery-Container{
+    height: 400px;
+    }
+  
+     
+      
+    
+    
+      .Head-Text{
+        font-size: 15px;
+      }
+      .Description-Text{
+        font-size: 25px;
+      }
+
+      .Default-Button {
+        font-size: 13px;
+      }
+      .Default-Button:hover {
+        font-size: 16px;
+      }
+
+     
+
+      #Introduce-Self{
+        width: 90%;
+        margin-top: 10px;
+      }
+
+      #My-Photo {
+        display: none;
+      }
+      #My-Photo-Mobile {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        display: block;
+        width: 40%;
+        aspect-ratio: 1;
+        background-image: var(--My-Photo);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        border-radius: 60px;
+      }
+      .Small-Description-Text {
+        width: 90%;
+      }
+      
+      #Consult-Window{ 
+        width: 90%; 
+      }
+      form {
+        width: 60%;
+        margin: 10px;
+      } 
+      #ConsultPhoto{
+        margin-left: 10px;
+      }
+      input , textarea{
+        font-size: 0.8rem;
+      }
+      .Section3::before{
+        width: calc(100% - 10px);
+      }
+
+     
+}
+
+/*Mobile Mode*/
+@media (max-width : 430px)
+{
+  .Gallery-Container{
+    height: 200px;
+  }
+  .Welcome-Text{
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 70%;
+    margin: 0 10px;
+   
+  }
+
+  #Welcome-Poster{
+    background-position: center;
+    
+    height: 400px;
+  }
+
+  #Welcome-Poster::before{
+    content: '\A';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0, 0, 0, 0.116);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+  }
+
+  .Head-Text{
+    
+    font-size: 15px;
+  }
+  .Description-Text{
+    font-size: 20px;
+  }
+
+  .Default-Button {
+    font-size: 11px;
+  }
+  .Default-Button:hover {
+    font-size: 14px;
+  }
+
+
+  #Introduce-Self {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .Small-Description-Text{
+    font-size: 13px;
+    width: 100%;
+  }
+
+  #My-Photo-Mobile {
+    width: 70%;
+  }
+  
+ 
+  #Consult-Window{ 
+    padding: 10px;
+    width: 90%; 
+  }
+  form {
+    width: 100%;
+    margin: 10px;
+  } 
+  #ConsultPhoto{
+    display: none;
+  }
+  input , textarea{
+    font-size: 0.5rem;
+  }
+
+  .Form-Button {
+    font-size: 0.6rem;
+  }
+  .Section3::before{
+    width: calc(100% - 10px);
+    height: 60%;
+  }
+}

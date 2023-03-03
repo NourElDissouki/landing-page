@@ -1,0 +1,175 @@
+.Header-Container{
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: center;
+   }
+   .Header{
+       user-select: none;
+       z-index: 1;
+       display: grid;
+       padding-right: 5%;
+       grid-template-columns: 20% 80%;
+       position: absolute;
+       top: 50;
+       height: 70px;
+       width: 70%;
+       background-color: var(--Focus-Color);
+       box-shadow: 0px 5px 50px var(--Header-Shadow-Color);
+       transition: all 0.25s;
+       
+   }
+   
+   .Header-Buttons{
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       height: 70px;
+       
+   }
+   
+   .Header-Button{
+       display: flex;
+       justify-content: center;
+       cursor: pointer;
+       position: relative;
+       margin: 0 15px 0 15px;
+       padding: 5px;
+      
+   }
+   
+   .Header-Button-Text{
+       position: relative;
+       font-family: 'Jacques Francois', serif;
+       font-size: 15px;
+       font-weight: bold;
+       color: var(--Primary-Color);
+       transition: color 0.25s;
+       transition-delay: 0.25s;
+   }
+   .HeaderButtonDecoration{
+       position: absolute;
+       height: 2px;
+       width: 0;
+       bottom: 0;
+       border-radius: 5px;
+       background-color: var(--Secondry-Color);
+       transition: width 0.25s, height 0.25s;
+       transition-delay: 0s, 0.25s;
+       background-position: top;
+       
+   }
+   
+   .Header-Button:hover > .Header-Button-Text {
+       color: var(--Focus-Color);
+   }
+   
+   .Header-Button:hover > .HeaderButtonDecoration {
+       width: 100%;
+       height: 100%;
+   }
+   
+   .Logo{
+       height: 70px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-family: 'Lobster', cursive;
+       font-size: 20px;
+       cursor: pointer;
+       
+   }
+   
+   
+   
+   .Logo .first{
+       transition: font-size 0.25s, color 0.25s;
+       transition-delay: 0s, 0.25s;
+       font-size: 30px;
+       color: var(--First-Logo-Color-Normal);
+   }
+   .Logo:hover .first{
+       color: var(--First-Logo-Color-Hover);
+       font-size: 40px;
+   }
+   .Logo .second{
+       transition: font-size 0.25s, color 0.25s;
+       transition-delay: 0.25s, 0s;
+       color: var(--Second-Logo-Color-Normal);
+       font-size: 35px;
+       
+   }
+   .Logo:hover .second{
+       font-size: 50px;
+       color: var(--Second-Logo-Color-Hover);
+     
+   }
+
+/*Small Laptop View*/
+@media (max-width : 1200px)
+{
+    .Header-Menu-Button{
+        display: none;
+    }
+    .Header{
+        width: 90%;
+    }
+}
+
+/*Tablet Mode*/
+@media (max-width : 800px)
+{
+    .Header{
+        width: 70%;
+        padding: 0;
+    }
+    .Header-Buttons{
+       display: none;
+    }
+    .Logo{
+        justify-content: flex-start;
+        margin-left: 20%;
+    }
+
+    .Header-Button-Menu {
+        display: inline-block;
+        cursor: pointer;
+        justify-self: flex-end;
+        align-self:center;
+        margin-right: 5%;
+    }
+    .Header-Menu-Button{
+        display: block;
+    }
+    .bar1, .bar2, .bar3 {
+        border-radius: 10px;
+        width: 35px;
+        height: 5px;
+        background-color: var(--Primary-Color);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      .change{
+        position: relative;
+    }
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+}
+
+/*Mobile Mode*/
+@media (max-width : 430px)
+{
+
+}

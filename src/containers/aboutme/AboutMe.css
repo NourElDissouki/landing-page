@@ -1,0 +1,92 @@
+#Introduce-Self {
+    margin-top: 60px;
+    height: fit-content;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 10px;
+}
+.Small-Description-Text {
+    width: 70%;
+}
+#My-Photo-Mobile{
+    display: none;
+}
+#My-Photo {
+    display: block;
+    height: 200px;
+    width: 25%;
+    background-image: var(--My-Photo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 60px;
+}
+
+.Small-Description-Text {
+    font-family: 'Jacques Francois';
+    font-size: 18px;
+    color: var(--Primary-Color);
+}
+
+/*Small Laptop View*/
+@media (max-width : 1200px)
+{
+    #Introduce-Self{
+        width: 90%;
+      }
+  
+      .Small-Description-Text {
+        width: 80%;
+      }
+}
+
+/*Tablet Mode*/
+@media (max-width : 800px)
+{
+    .Description-Text{
+        font-size: 25px;
+    }
+    #Introduce-Self{
+        width: 90%;
+        margin-top: 10px;
+      }
+
+      #My-Photo {
+        display: none;
+      }
+      #My-Photo-Mobile {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        display: block;
+        width: 40%;
+        aspect-ratio: 1;
+        background-image: var(--My-Photo);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        border-radius: 60px;
+      }
+      .Small-Description-Text {
+        width: 90%;
+      }
+      
+}
+/*Mobile Mode*/
+@media (max-width : 430px)
+{
+    #Introduce-Self {
+        margin-top: 0;
+        width: 100%;
+      }
+    
+      .Small-Description-Text{
+        font-size: 13px;
+        width: 100%;
+      }
+    
+      #My-Photo-Mobile {
+        width: 70%;
+      }
+}
